@@ -14,7 +14,15 @@ const Polygon = require('./models/Polygon');
 
 const app = express();
 app.use(express.json());
-app.use(cors({origin: 'https://talking-lands.onrender.com'}));
+app.use(cors());
+
+ app.use((req, res, next) => {
+
+      res.setHeader('Access-Control-Allow-Origin', 'https://talking-lands.onrender.com');
+
+        next();
+
+    });
 
 const URL = process.env.MONGO_URL;
 console.log('MongoDB URI:', URL);
