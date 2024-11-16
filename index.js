@@ -18,7 +18,7 @@ app.use(cors());
 
  app.use((req, res, next) => {
 
-      res.setHeader('Access-Control-Allow-Origin', 'https://talking-lands.onrender.com');
+      res.setHeader('Access-Control-Allow-Origin', 'https://talking-lands.vercel.app/');
 
         next();
 
